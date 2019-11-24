@@ -23,7 +23,7 @@ jobs:
       with:
         repo: bullwinkle/bullwinkle.github.io
         target_branch: master
-        build_dir: first-app
+        build_dir: dist
         keep_history: true
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}        
