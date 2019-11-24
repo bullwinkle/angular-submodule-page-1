@@ -21,7 +21,7 @@ jobs:
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
       with:
-        repo: https://github.com/bullwinkle/bullwinkle.github.io.git
+        repo: bullwinkle/bullwinkle.github.io
         target_branch: master
         build_dir: dist
       env:
