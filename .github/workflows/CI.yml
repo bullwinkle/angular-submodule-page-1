@@ -25,4 +25,4 @@ jobs:
         target_branch: gh-pages
         build_dir: public
       env:
-        GITHUB_PAT: f15683bed893958e45a293e72be6a2648be27221
+        GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
