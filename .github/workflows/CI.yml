@@ -15,14 +15,14 @@ jobs:
       with:
         node-version: '10.x'
     - run: npm ci
-    - name: Building...        
+    - name: Building...
       run: |
-        npx ng build --prod --baseHref=/angular-submodule-page-1 --deployUrl=/angular-submodule-page-1/
+        npx ng build --prod --baseHref=/first-app --deployUrl=/first-app/
     - name: Deploy
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
       with:
         build_dir: dist
       env:
-        GITHUB_PAT: ${{ secrets.GITHUB_PAT }}        
+        GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
 
