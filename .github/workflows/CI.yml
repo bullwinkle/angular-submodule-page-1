@@ -16,8 +16,7 @@ jobs:
         node-version: '10.x'
     - run: npm ci
     - name: Building...
-      run: |
-        npx ng build --prod --baseHref=/first-app --deployUrl=/first-app/
+      run: npx ng build --prod --baseHref=/first-app --deployUrl=/first-app/
     - name: Deploy
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
