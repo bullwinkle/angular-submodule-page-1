@@ -17,12 +17,4 @@ jobs:
     - run: |
         npm ci
         npm run build --prod
-    - name: Deploy
-      if: success()
-      uses: crazy-max/ghaction-github-pages@v1
-      with:
-        repo: https://github.com/bullwinkle/bullwinkle.github.io.git
-        target_branch: gh-pages
-        build_dir: pages
-      env:
-        GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+
