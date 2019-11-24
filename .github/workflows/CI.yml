@@ -22,8 +22,8 @@ jobs:
       uses: crazy-max/ghaction-github-pages@v1
       with:
         repo: https://github.com/bullwinkle/bullwinkle.github.io.git
-        target_branch: gh-pages
-        build_dir: '/'
+        target_branch: master
+        build_dir: dist
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}        
 
