@@ -17,15 +17,12 @@ jobs:
     - run: npm ci
     - name: Building...        
       run: |
-        npx ng build --prod --baseHref=/angular-submodule-page-1 --deployUrl=/angular-submodule-page-1/ --outputPath=dist/pages/angular-submodule-page-1/
+        npx ng build --prod --baseHref=/angular-submodule-page-1 --deployUrl=/angular-submodule-page-1/
     - name: Deploy
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
       with:
-        repo: bullwinkle/bullwinkle.github.io
         build_dir: dist
-        target_branch: master
-        keep_history: true
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}        
 
