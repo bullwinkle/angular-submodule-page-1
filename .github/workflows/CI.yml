@@ -10,13 +10,16 @@ jobs:
     steps:
     - name: Checkouting...
       uses: actions/checkout@v1
-    - name: Bulding...
+    - name: Installing...
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
     - run: |
         npm ci
-        npm run ng build --prod --baseHref=/angular-submodule-page-1 --deployUrl=/angular-submodule-page-1/
+    - name: Building...        
+      run: |
+        npm ci
+        npx ng build --prod --baseHref=/angular-submodule-page-1 --deployUrl=/angular-submodule-page-1/
     - name: Deploy
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
