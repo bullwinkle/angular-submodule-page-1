@@ -16,7 +16,7 @@ jobs:
         node-version: '10.x'
     - run: |
         npm ci
-        npm run build --prod
+        npm run ng build --prod --baseHref=/angular-submodule-page-1
     - name: Deploy
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
