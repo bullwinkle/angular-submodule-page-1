@@ -16,4 +16,4 @@ jobs:
         node-version: '10.x'
     - run: |
         npm ci
-        npm runb build --prod
+        npm run build --prod
