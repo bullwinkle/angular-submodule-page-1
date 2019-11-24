@@ -14,11 +14,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - run: |
-        npm ci
+    - run: npm ci
     - name: Building...        
       run: |
-        npm ci
         npx ng build --prod --baseHref=/angular-submodule-page-1 --deployUrl=/angular-submodule-page-1/
     - name: Deploy
       if: success()
