@@ -17,12 +17,12 @@ jobs:
     - run: npm ci
     - name: Building...        
       run: |
-        npx ng build --prod --baseHref=/angular-submodule-page-1 --deployUrl=/angular-submodule-page-1/ --outputPath=apps/
+        npx ng build --prod --baseHref=/angular-submodule-page-1 --deployUrl=/angular-submodule-page-1/ --outputPath=dist/pages/
     - name: Deploy
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
       with:
-        build_dir: apps/
+        build_dir: dist/
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}        
 
