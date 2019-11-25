@@ -22,4 +22,6 @@ jobs:
       uses: crazy-max/ghaction-github-pages@v1
       with:
         build_dir: dist/first-app
+      env:
+        GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
 
